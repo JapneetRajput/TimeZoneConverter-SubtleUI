@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity  {
     String h;
     public char c,d;
     Spinner hour,minute,second, fromCountry, toCountry;
-//    int[] hours = new int[]{}, minutes = new int[]{}, seconds = new int[]{};
     void check(){
 
     }
@@ -41,32 +40,8 @@ public class MainActivity extends AppCompatActivity  {
         timeZones = findViewById(R.id.timeZones);
         tv_timer1=findViewById(R.id.tv_timer1);
         button = findViewById(R.id.Convert);
-//        hour = findViewById(R.id.hours);
-//        minute = findViewById(R.id.minutes);
-//        second = findViewById(R.id.seconds);
         toCountry = findViewById(R.id.ToCountry);
         fromCountry = findViewById(R.id.FromCountry);
-//        for(int i=0; i<=24; i++){
-//            hours[i] = i;
-//        }
-//        for(int i=0; i<=60; i++){
-//            minutes[i] = i;
-//        }
-//        for(int i=0; i<=60; i++){
-//            seconds[i] = i;
-//        }
-//        ArrayList<Integer> hours = new ArrayList<>();
-//        for(int i=0; i<24; i++){
-//            hours.add(i);
-//        }
-//        ArrayList<Integer> minutes = new ArrayList<>();
-//        for(int i=0; i<60; i++){
-//            minutes.add(i);
-//        }
-//        ArrayList<Integer> seconds = new ArrayList<>();
-//        for(int i=0; i<60; i++){
-//            seconds.add(i);
-//        }
         ArrayList<String> fromCountries = new ArrayList<>();
         fromCountries.add("India");
         fromCountries.add("Chicago");
@@ -107,49 +82,6 @@ public class MainActivity extends AppCompatActivity  {
                 timePickerDialog.show();
             }
         });
-//        hour.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_spinner_dropdown_item,hours));
-//        hour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                String Hrs = parent.getItemAtPosition(position).toString();
-//                hrs = Integer.parseInt(Hrs);
-//                hrS = hrs;
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-//        minute.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_spinner_dropdown_item, minutes));
-//        minute.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                String Mins = parent.getItemAtPosition(position).toString();
-//                mins = Integer.parseInt(Mins);
-//                minS = mins;
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-//        second.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_spinner_dropdown_item, seconds));
-//        second.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                String Secs = parent.getItemAtPosition(position).toString();
-//                secs = Integer.parseInt(Secs);
-//                secS=secs;
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-
         toCountry.setAdapter(new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_spinner_dropdown_item,toCountries));
         toCountry.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
